@@ -5,15 +5,17 @@ export const NewsContext = createContext();
 
 export const NewsContextProvider = (props) => {
   const [data, setData] = useState();
-  const apiKey = "d3a68d3a93a54948a016a1553bc4d20c";
+  const apiKey = "4569dc201d4846d3a73c5ea3e486890d";
+
+  const fetchNew = async()=>{
+    const res = await axios.get( `https://newsapi.org/v2/top-headlines?country=in&apiKey=4569dc201d4846d3a73c5ea3e486890d`)
+
+    setData(res.data)
+  }
+
 
   useEffect(() => {
-    axios
-      .get(
-        `http://newsapi.org/v2/everything?q=rich&from=2020-07-19&sortBy=publishedAt&apiKey=${apiKey}`
-      )
-      .then((response) => setData(response.data))
-      .catch((error) => console.log(error));
+    fetchNew();
   }, []);
 
   return (

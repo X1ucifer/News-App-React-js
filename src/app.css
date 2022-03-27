@@ -4,14 +4,15 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family: inter;
   width: 80%;
   margin: 0 auto;
   background: rgb(251, 254, 255);
-}
+} */
 
 .all__news {
+  padding: 60px;
   margin: 50px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -25,13 +26,23 @@ body {
   border-radius: 5px;
 }
 
+.image {
+  width: 100%;
+  height: 30vh;
+}
+
 .news__title {
+  margin-top: 10px;
+  font-size: x-large;
   padding-bottom: 10px;
   border-bottom: 1px solid lightgray;
+  font-family: 'Roboto', sans-serif;
 }
 
 .head__text {
   margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+
 }
 
 .news__desc {
